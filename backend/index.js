@@ -1,5 +1,6 @@
 require("dotenv").config();
 const express = require("express");
+const cors = require("cors")
 const mongoose = require("mongoose");
 
 const app = express();
@@ -17,6 +18,7 @@ mongoose
 
 //Midelware
 app.use(express.json())
+
 // app.use((req, res, next) => {
 //   console.log(req.path, req.params);
 //   next();
