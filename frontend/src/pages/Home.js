@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("https://mern-stack-api-zeta.vercel.app/api/workouts");
+      const response = await fetch("/api/workouts");
       const data = await response.json();
       // console.log(data);
       if (response.ok) {

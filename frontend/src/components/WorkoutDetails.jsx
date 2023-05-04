@@ -11,10 +11,10 @@ const WorkoutDetails = ({workout}) => {
 
   const handelClick = async (id)=>{
     // console.log(id);
-    const response = await fetch(`https://mern-stack-api-zeta.vercel.app/api/workouts/${id}`, {method : 'DELETE'});
+    const response = await fetch(`/api/workouts/${id}`, {method : 'DELETE'});
     const json = await response.json();
 
-    // console.log(json);
+    console.log(json);
 
     
     dispatch({type : 'DELETE_WORKOUT', payload : json})
